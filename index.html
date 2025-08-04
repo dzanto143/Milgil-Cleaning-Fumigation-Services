@@ -45,42 +45,46 @@
   <div class="container mx-auto flex justify-between items-center">
     
     <!-- Logo + Text Grouped Horizontally -->
-    <div class="flex items-center space-x-1">
-      <img src="flavicon.jpeg" alt="My Logo" class="w-12 h-12 rounded-full object-cover">
-      <h7 class="text-nm font-bold"><a href="#home">
-        MILGIL CLEANING & FUMIGATION SERVICES
-     </a> </h7>
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between flex-wrap">
+
+    <!-- Logo + Brand -->
+    <div class="flex items-center space-x-3">
+      <img src="flavicon.jpeg" alt="Logo" class="w-10 h-10 rounded-full object-cover" />
+      <h1 class="text-sm sm:text-lg font-bold">MILGIL CLEANING & FUMIGATION SERVICES</h1>
     </div>
 
-    <!-- Navigation Menu -->
-     <nav>
-      
-        <ul class="flex space-x-2 items-center">
-          
-          <!-- Dropdown Parent -->
-          <li class="relative group">
-            <a href="#" class="hover:text-gray-300">Services ▾</a>
-            
-            <!-- Dropdown Content -->
-            <ul class="absolute left-0 mt-2 bg-white text-black rounded-md shadow-lg hidden group-hover:block w-48 z-20">
-              <li><a href="Fumigation Services.html" class="block px-4 py-2 hover:bg-yellow-100">Fumigation</a></li>
-              <li><a href="Sofa Seat Cleaning Services.html" class="block px-4 py-2 hover:bg-yellow-100">Sofa Cleaning</a></li>
-              <li><a href="carpertcleaninh.html" class="block px-4 py-2 hover:bg-yellow-100">Carpet Cleaning</a></li>
-              <li><a href="office cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Office Cleaning</a></li>
-              <li><a href="moveinout.html" class="block px-4 py-2 hover:bg-yellow-100">Move In/Out</a></li>
-              <li><a href="Post Construction Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Post Construction Cleaning</a></li>
-              <li><a href="housecleaning.html" class="block px-4 py-2 hover:bg-yellow-100">House Cleaning Services</a></li>
-            </ul>
-          </li>
+    <!-- Navigation -->
+    <nav class="w-full md:w-auto mt-4 md:mt-0">
+      <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-sm sm:text-base">
 
-          <li><a href="#about" class="hover:text-gray-300">About</a></li>
-          <li><a href="#Blog" class="hover:text-gray-300">Blog</a></li>
-          <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
-        </ul>
-      </nav>
+        <!-- Dropdown Parent -->
+        <li class="relative group">
+          <a href="#" class="hover:text-gray-300 flex items-center">Services ▾</a>
+          <!-- Dropdown Content -->
+          <ul class="absolute left-0 mt-1 bg-white text-black rounded-md shadow-lg hidden group-hover:block w-56 z-50">
+            <li><a href="Fumigation Services.html" class="block px-4 py-2 hover:bg-yellow-100">Fumigation</a></li>
+            <li><a href="Sofa Seat Cleaning Services.html" class="block px-4 py-2 hover:bg-yellow-100">Sofa Cleaning</a></li>
+            <li><a href="carpertcleaninh.html" class="block px-4 py-2 hover:bg-yellow-100">Carpet Cleaning</a></li>
+            <li><a href="office cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Office Cleaning</a></li>
+            <li><a href="moveinout.html" class="block px-4 py-2 hover:bg-yellow-100">Move In/Out</a></li>
+            <li><a href="Post Construction Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Post Construction Cleaning</a></li>
+            <li><a href="housecleaning.html" class="block px-4 py-2 hover:bg-yellow-100">House Cleaning</a></li>
+          </ul>
+        </li>
+
+        <!-- Other links -->
+        <li><a href="#about" class="hover:text-gray-300">About</a></li>
+        <li><a href="#Blog" class="hover:text-gray-300">Blog</a></li>
+        <li><a href="gallery.html" class="hover:text-gray-300">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
   </div>
 
-  
+  <a href="https://wa.me/254725274364" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg z-50" target="_blank">
+  💬 Chat with us
+</a>
 </header>
 
   <section class="bg-paragraph" class="bg-white py-16 text-center" >
@@ -90,6 +94,7 @@
       <a href="#contact" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">Book Now!</a>
     </div>
   </section>
+  
 
   <section id="services" class="py-16 bg-gray-50">
 
