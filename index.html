@@ -73,13 +73,7 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-}
 
-.content h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
 
 .content p {
   font-size: 1.25rem;
@@ -102,56 +96,62 @@
 </head>
 <body id="home" class="bg-gray-100 text-gray-800">
 <header class="bg-yellow-700 text-white shadow-md">
-  <div class="container mx-auto flex justify-between items-center p-4">
+<div class="container mx-auto flex justify-between items-center p-4 bg-gray-800 text-white relative">
 
-    <!-- Logo + Brand Text -->
-    <div class="flex items-center space-x-3">
-      <img src="flavicon.jpeg" alt="Logo" class="w-10 h-10 rounded-full object-cover" />
-      <h1 class="text-sm sm:text-lg font-bold">MILGIL CLEANING & FUMIGATION SERVICES</h1>
-    </div>
-
-    <!-- Mobile Menu Toggle -->
-    <button id="menu-toggle" class="md:hidden text-white text-2xl p-2 focus:outline-none">
-      ☰
-    </button>
-
-    <!-- Navigation Links -->
-    <nav id="nav-menu" class="hidden md:flex md:items-center md:space-x-6 text-sm sm:text-base">
-      <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
-
-        <!-- Dropdown -->
-        <li class="relative group">
-          <a href="#" class="hover:text-gray-300 flex items-center">Services ▾</a>
-          <ul class="absolute left-0 mt-1 bg-white text-black rounded-md shadow-lg hidden group-hover:block w-56 z-50">
-            <li><a href="Fumigation Services.html" class="block px-4 py-2 hover:bg-yellow-100">Fumigation</a></li>
-            <li><a href="Sofa Seat Cleaning Services.html" class="block px-4 py-2 hover:bg-yellow-100">Sofa Cleaning</a></li>
-            <li><a href="carpertcleaninh.html" class="block px-4 py-2 hover:bg-yellow-100">Carpet Cleaning</a></li>
-            <li><a href="office cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Office Cleaning</a></li>
-            <li><a href="moveinout.html" class="block px-4 py-2 hover:bg-yellow-100">Move In/Out</a></li>
-            <li><a href="Post Construction Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Post Construction Cleaning</a></li>
-            <li><a href="housecleaning.html" class="block px-4 py-2 hover:bg-yellow-100">House Cleaning</a></li>
-            <li><a href="car-interior-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Car Interior Cleaning</a></li>
-            <li><a href="mattress-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Mattress Cleaning</a></li>
-            <li><a href="watertank-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Water Tank Cleaning</a></li>
-            <li><a href="window-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Window Cleaning</a></li>
-            <li><a href="restaurant cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Restaurant Cleaning</a></li>
-            <li><a href="Industrial Cleaning.HTML" class="block px-4 py-2 hover:bg-yellow-100">Industrial Cleaning</a></li>
-            <li><a href="Government Office Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Government Office Cleaning</a></li>
-            <li><a href="Bank Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Bank Cleaning</a></li>
-            <li><a href="School Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">School Cleaning</a></li>
-            <li><a href="Airport Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Airport Cleaning</a></li>
-            <li><a href="Hospital Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Hospital Cleaning</a></li>
-          </ul>
-        </li>
-
-        <!-- Static Links -->
-        <li><a href="#about" class="hover:text-gray-300">About</a></li>
-        <li><a href="blog.html" class="hover:text-gray-300">Blog</a></li>
-        <li><a href="gallery.html" class="hover:text-gray-300">Gallery</a></li>
-        <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Logo + Brand -->
+  <div class="flex items-center space-x-3">
+    <img src="flavicon.jpeg" alt="Logo" class="w-10 h-10 rounded-full object-cover" />
+    <h1 class="text-sm sm:text-lg font-bold">MILGIL CLEANING & FUMIGATION SERVICES</h1>
   </div>
+
+  <!-- Mobile Menu Toggle -->
+  <button id="menu-toggle" class="md:hidden text-white text-2xl p-2 focus:outline-none">
+    ☰
+  </button>
+
+  <!-- Navigation Links -->
+  <nav id="nav-menu"
+       class="hidden md:flex md:items-center md:space-x-6 text-sm sm:text-base absolute md:static top-full right-0 bg-gray-800 md:bg-transparent w-2/3 md:w-auto flex-col md:flex-row space-y-2 md:space-y-0 p-4 md:p-0 rounded-lg shadow-lg md:shadow-none">
+
+    <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-right md:text-left w-full">
+
+      <!-- Dropdown -->
+      <li class="relative group">
+        <a href="#" class="hover:text-yellow-400 flex justify-between items-center">
+          Services ▾
+        </a>
+        <!-- Dropdown list -->
+        <ul
+          class="absolute right-0 md:left-0 mt-1 bg-white text-black rounded-md shadow-lg hidden group-hover:block md:w-56 w-full z-50">
+          <li><a href="Fumigation Services.html" class="block px-4 py-2 hover:bg-yellow-100">Fumigation</a></li>
+          <li><a href="Sofa Seat Cleaning Services.html" class="block px-4 py-2 hover:bg-yellow-100">Sofa Cleaning</a></li>
+          <li><a href="carpertcleaninh.html" class="block px-4 py-2 hover:bg-yellow-100">Carpet Cleaning</a></li>
+          <li><a href="office cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Office Cleaning</a></li>
+          <li><a href="moveinout.html" class="block px-4 py-2 hover:bg-yellow-100">Move In/Out</a></li>
+          <li><a href="Post Construction Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Post Construction Cleaning</a></li>
+          <li><a href="housecleaning.html" class="block px-4 py-2 hover:bg-yellow-100">House Cleaning</a></li>
+          <li><a href="car-interior-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Car Interior Cleaning</a></li>
+          <li><a href="mattress-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Mattress Cleaning</a></li>
+          <li><a href="watertank-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Water Tank Cleaning</a></li>
+          <li><a href="window-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Window Cleaning</a></li>
+          <li><a href="restaurant cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Restaurant Cleaning</a></li>
+          <li><a href="Industrial Cleaning.HTML" class="block px-4 py-2 hover:bg-yellow-100">Industrial Cleaning</a></li>
+          <li><a href="Government Office Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Government Office Cleaning</a></li>
+          <li><a href="Bank Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Bank Cleaning</a></li>
+          <li><a href="School Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">School Cleaning</a></li>
+          <li><a href="Airport Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Airport Cleaning</a></li>
+          <li><a href="Hospital Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Hospital Cleaning</a></li>
+        </ul>
+      </li>
+
+      <!-- Other Links -->
+      <li><a href="#about" class="hover:text-yellow-400">About</a></li>
+      <li><a href="blog.html" class="hover:text-yellow-400">Blog</a></li>
+      <li><a href="gallery.html" class="hover:text-yellow-400">Gallery</a></li>
+      <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+    </ul>
+  </nav>
+</div>
 
   <!-- WhatsApp Button -->
   <a href="https://wa.me/254725274364" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg z-50" target="_blank">
@@ -170,7 +170,7 @@
 
 <section class="bg-paragraph">
   <div class="content">
-    <h2>Welcome to Milgil Cleaning And Fumigation Services</h2>
+    <h2><b> to Milgil Cleaning And Fumigation Services</b></h2>
     <p><b>At Milgil Cleaning and Fumigation Services, we take pride in being a leading registered cleaning and pest control company in Nairobi, Kenya. With a relentless commitment to excellence, we are dedicated to providing top-notch cleaning and fumigation services that transform spaces and promote healthier living and working environments.</b></p>
     <a href="#contact" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">Book Now!</a>
   </div>
