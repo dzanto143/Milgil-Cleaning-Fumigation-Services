@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Milgil Cleaning & Fumigation Services offers professional cleaning, pest control, and fumigation in Nairobi and across Kenya. Book reliable services today!">
+  <meta name="keywords" content="cleaning services, fumigation, pest control, Nairobi, Milgil Cleaning, professional cleaning">
+  <meta name="author" content="Milgil Cleaning & Fumigation Services">
   <title>Milgil Cleaning & Fumigation Services</title>
    <script src="https://cdn.tailwindcss.com"></script>
    <!-- Google tag (gtag.js) -->
@@ -32,68 +35,128 @@
       height: auto;
       border-radius: 50%;
     }
-    .bg-paragraph {
-      background-image: url('cz.jpg'); /* relative path */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: rgb(0, 0, 0);
-      padding: 10px;
-      height: 500px;
-      font-size: larger;
-      text-decoration: black;
-      font-size: larger;
-      text-align: justify;
-      
-    }
+.bg-paragraph {
+  position: relative;
+  height: 500px;
+  padding: 10px;
+  font-size: larger;
+  text-align: justify;
+  color: #000;
+  overflow: hidden;
+}
 
+/* Pseudo-element for transparent background image */
+.bg-paragraph::before {
+ content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(241, 241, 241, 0.35), rgba(252, 249, 249, 0.35)), 
+                    url('DVD Rental Store Employees in Uniform.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8; /* controls overall transparency */
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .bg-paragraph {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  .content h2 {
+    font-size: 1.5rem;
+  }
+  .content p {
+    font-size: 1rem;
+  }
+}
 </style>
 </head>
-<body id="home" class="bg-gray-100 text-gray-800">
+<body id="home" class="bg-gray text-gray-800">
 <header class="bg-yellow-700 text-white shadow-md">
-  <div class="container mx-auto flex justify-between items-center p-4">
+<div class="container mx-auto flex justify-between items-center p-4">
+   <!-- Logo + Brand Text --> <div class="flex items-center space-x-3"> 
+  <img src="flavicon.jpeg" alt="Logo" class="w-10 h-10 rounded-full object-cover" /> 
+  <h1 class="text-sm sm:text-lg font-bold">MILGIL CLEANING & FUMIGATION SERVICES</h1> 
+</div> <!-- Mobile Menu Toggle --> 
+<button id="menu-toggle" class="md:hidden text-white text-2xl p-2 focus:outline-none"> ☰ </button> 
+<!-- Navigation Links --> <nav id="nav-menu" class="hidden md:flex md:items-center md:space-x-6 text-sm sm:text-base">
+   <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
+     <!-- Dropdown --> 
+  <li class="relative group"> <a href="#" class="hover:text-gray-300 flex items-center">Services ▾</a> 
+  <ul class="absolute left-0 mt-1 bg-white text-black rounded-md shadow-lg hidden group-hover:block w-56 z-50">
+  <li><a href="Fumigation Services.html" class="block px-4 py-2 hover:bg-yellow-100">Fumigation</a></li> 
+ <li><a href="office cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Office Cleaning</a></li> 
+  <li><a href="Post Construction Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Post Construction Cleaning</a></li> 
+ 
+  <!-- Dropdown Wrapper -->
+<li class="relative group">
+  <!-- Main Button -->
+  <button
+    onclick="document.getElementById('cleaningDropdown').classList.toggle('hidden')"
+    class="w-full text-left block px-4 py-2 hover:bg-yellow-100 flex justify-between items-center"
+  >
+    House Cleaning
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
 
-    <!-- Logo + Brand Text -->
-    <div class="flex items-center space-x-3">
-      <img src="flavicon.jpeg" alt="Logo" class="w-10 h-10 rounded-full object-cover" />
-      <h1 class="text-sm sm:text-lg font-bold">MILGIL CLEANING & FUMIGATION SERVICES</h1>
-    </div>
-
-    <!-- Mobile Menu Toggle -->
-    <button id="menu-toggle" class="md:hidden text-white text-2xl p-2 focus:outline-none">
-      ☰
-    </button>
-
-    <!-- Navigation Links -->
-    <nav id="nav-menu" class="hidden md:flex md:items-center md:space-x-6 text-sm sm:text-base">
-      <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
-
-        <!-- Dropdown -->
-        <li class="relative group">
-          <a href="#" class="hover:text-gray-300 flex items-center">Services ▾</a>
-          <ul class="absolute left-0 mt-1 bg-white text-black rounded-md shadow-lg hidden group-hover:block w-56 z-50">
-            <li><a href="Fumigation Services.html" class="block px-4 py-2 hover:bg-yellow-100">Fumigation</a></li>
-            <li><a href="Sofa Seat Cleaning Services.html" class="block px-4 py-2 hover:bg-yellow-100">Sofa Cleaning</a></li>
-            <li><a href="carpertcleaninh.html" class="block px-4 py-2 hover:bg-yellow-100">Carpet Cleaning</a></li>
-            <li><a href="office cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Office Cleaning</a></li>
-            <li><a href="moveinout.html" class="block px-4 py-2 hover:bg-yellow-100">Move In/Out</a></li>
-            <li><a href="Post Construction Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Post Construction Cleaning</a></li>
-            <li><a href="housecleaning.html" class="block px-4 py-2 hover:bg-yellow-100">House Cleaning</a></li>
-            <li><a href="car-interior-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Car Interior Cleaning</a></li>
-            <li><a href="mattress-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Mattress Cleaning</a></li>
-            <li><a href="watertank-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Water Tank Cleaning</a></li>
-            <li><a href="window-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Window Cleaning</a></li>
-          </ul>
-        </li>
-
-        <!-- Static Links -->
-        <li><a href="#about" class="hover:text-gray-300">About</a></li>
-        <li><a href="blog.html" class="hover:text-gray-300">Blog</a></li>
-        <li><a href="gallery.html" class="hover:text-gray-300">Gallery</a></li>
-        <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <!-- Dropdown Menu -->
+  <ul
+    id="cleaningDropdown"
+    class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg hidden"
+  >
+    <li><a href="mattress-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Mattress Cleaning</a></li>
+    <li><a href="Sofa Seat Cleaning Services.html" class="block px-4 py-2 hover:bg-yellow-100">Sofa Set Cleaning</a></li>
+    <li><a href="carpertcleaninh.html" class="block px-4 py-2 hover:bg-yellow-100">Carpet Cleaning</a></li>
+    <li><a href="moveinout.html" class="block px-4 py-2 hover:bg-yellow-100">Move-in/Out Cleaning</a></li>
+    <li><a href="window-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Window Cleaning</a></li>
+  </ul>
+</li>
+  <li><a href="car-interior-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Car Interior Cleaning</a></li> 
+   <li><a href="watertank-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Water Tank Cleaning</a></li> 
+  <li><a href="restaurant cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Restaurant Cleaning</a></li> 
+  <li><a href="Industrial Cleaning.HTML" class="block px-4 py-2 hover:bg-yellow-100">Industrial Cleaning</a></li> 
+  <li><a href="Government Office Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Government Office Cleaning</a></li> 
+  <li><a href="Bank Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Bank Cleaning</a></li> 
+  <li><a href="School Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">School Cleaning</a></li> 
+  <li><a href="Airport Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Airport Cleaning</a></li> 
+  <li><a href="Hospital Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Hospital Cleaning</a></li></ul> 
+</li> <!-- Static Links --> 
+<li><a href="#about" class="hover:text-gray-300">About</a></li> 
+<li><a href="blog.html" class="hover:text-gray-300">Blog</a></li> 
+<li><a href="gallery.html" class="hover:text-gray-300">Gallery</a></li> 
+<li><a href="#contact" class="hover:text-gray-300">Contact</a></li> </ul> </nav> 
+</div>
 
   <!-- WhatsApp Button -->
   <a href="https://wa.me/254725274364" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg z-50" target="_blank">
@@ -110,26 +173,20 @@
   });
 </script>
 
-  <section class="bg-paragraph" class="bg-white py-16 text-center" >
-    <div class="container mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-4"  >Welcome to Milgil Cleaning And Fumigation Services</h2>
-      <p class="text-xl text-black-600 mb-4"  > <b>At Milgil Cleaning and Fumigation Services, we take pride in being a leading registered cleaning and pest control company in Nairobi, Kenya. With a relentless commitment to excellence, we are dedicated to providing top-notch cleaning and fumigation services that transform spaces and promote healthier living and working enviroments.</b></p>
-      <a href="#contact" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">Book Now!</a>
-    </div>
-  </section>
-  
+<section class="bg-paragraph">
+  <div class="content">
+    <h3><b> Welcome to Milgil Cleaning And Fumigation Services</b></h3>
+    <p><b>At Milgil Cleaning and Fumigation Services, we take pride in being a leading registered cleaning and pest control company in Nairobi, Kenya. With a relentless commitment to excellence, we are dedicated to providing top-notch cleaning and fumigation services that transform spaces and promote healthier living and working environments.</b></p>
+    <a href="#contact" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">Book Now!</a>
+  </div>
+</section>
 
   <section id="services" class="py-16 bg-gray-50">
 
     <div class="container mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-10"><u>Our Services</u></h3>
       <div class="grid md:grid-cols-3 gap-8" >
-        <div class="bg-white p-6 rounded-lg shadow-md">
-            <img src="house cleaning.jpeg"  class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
-          <h4 class="text-xl font-bold mb-2">Move In/Move Out Cleaning</h4>
-          <p class="p-3"> Our Move In/Move Out Cleaning service ensures that every inch of the property is thoroughly cleaned and sanitized.</p>
-          <a href="moveinout.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
-        </div>
+
         <div class="bg-white p-6 rounded-lg shadow-md">
             <img src="hous cleaning.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
           <h4 class="text-xl font-bold mb-3">House Cleaning Services</h4>
@@ -142,18 +199,18 @@
           <p class="p-2">We offer flexible and professional office cleaning services tailored to suit your business hours and needs.</p>
           <a href="office cleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
         </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+               <!--<div class="bg-white p-6 rounded-lg shadow-md">
                     <img src="sofa set cleaning.jpeg"  class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
           <h4 class="text-xl font-bold mb-3">Sofa Seat Cleaning Services</h4>
           <p class="p-2">Our Sofa Cleaning service uses safe, effective methods tailored to your sofa’s material .</p>
           <a href="Sofa Seat Cleaning Services.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
-        </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
+        </div>-->
+               <!-- <div class="bg-white p-6 rounded-lg shadow-md">
                     <img src="carpet cleaning.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
           <h4 class="text-xl font-bold mb-3">Carpet Cleaning Services</h4>
           <p class="p-2">Revive your carpet, refresh your air.</p>
           <a href="carpertcleaninh.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
-        </div>
+        </div>-->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <img src="post construction.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
           <h4 class="text-xl font-bold mb-3">Post Construction Cleaning</h4>
@@ -166,12 +223,12 @@
           <p class="p-2">Protect your space from pests safely and effectively</p>
            <a href="Fumigation Services.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
         </div>
-         <div class="bg-white p-6 rounded-lg shadow-md">
+         <!--<div class="bg-white p-6 rounded-lg shadow-md">
                     <img src="window.jpg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
           <h4 class="text-xl font-bold mb-3">Window Cleaning Services</h4>
           <p class="p-2">Our Window Cleaning service ensures streak-free, shining results inside and out</p>
            <a href="window-cleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
-        </div>
+        </div>-->
          <div class="bg-white p-6 rounded-lg shadow-md">
                     <img src="water thank.jpg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
           <h4 class="text-xl font-bold mb-3">Water Tank Cleaning </h4>
@@ -184,12 +241,61 @@
           <p class="p-2">Our Car Interior Cleaning service gives your car a fresh feel and showroom shine.</p>
            <a href="car-interior-cleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
         </div>
-         <div class="bg-white p-6 rounded-lg shadow-md">
+         <!--<div class="bg-white p-6 rounded-lg shadow-md">
                     <img src="matress cleaning.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
           <h4 class="text-xl font-bold mb-3">Mattress Cleaning</h4>
           <p class="p-2">Cleaning service removes deep-seated dirt and allergens for a healthier sleep environment.</p>
            <a href="mattress-cleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
+        </div>-->
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+                    <img src="g17.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3">Restaurant Cleaning</h4>
+          <p class="p-2">We help restaurants maintain health code compliance, prevent cross-contamination, and create a clean and welcoming environment for customers and staff.</p>
+           <a href="restaurant cleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
         </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="g16.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3">Industrial Cleaning</h4>
+          <p class="p-2">We use industry-grade equipment and trained personnel to clean safely and efficiently, minimizing downtime and supporting regulatory compliance.</p>
+           <a href="Industrial Cleaning.HTML" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
+        </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="g13.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3">Government Office Cleaning</h4>
+          <p class="p-2">We understand the sensitivity of working in government spaces and prioritize confidentiality, reliability, and security in all our operations.</p>
+           <a href="Government Office Cleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
+        </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="g12.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3">Bank Cleaning</h4>
+          <p class="p-2">We work during off-peak hours or as scheduled, and all our staff are trained to work discreetly in high-security environments.</p>
+           <a href="Bank Cleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
+        </div>
+       <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="g14.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3">School Cleaning</h4>
+          <p class="p-2">We use child-safe, non-toxic products and can clean after school hours or during holidays to minimize disruption.</p>
+           <a href="Bank Cleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
+        </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="g14.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3">Airport Cleaning</h4>
+          <p class="p-2">We work in coordination with airport management to ensure cleaning meets international health and safety standards.</p>
+           <a href="Airport Cleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
+        </div>
+                  <div class="bg-white p-6 rounded-lg shadow-md">
+          <img src="g14.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-3">Airport Cleaning</h4>
+          <p class="p-2">We use hospital-grade disinfectants, color-coded tools to avoid cross-contamination, and staff trained in infection control practices. We help healthcare facilities maintain sterile, safe, and compliant environments.</p>
+           <a href="Hospital Cleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
+        </div>
+                <!--<div class="bg-white p-6 rounded-lg shadow-md">
+            <img src="house cleaning.jpeg"  class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
+          <h4 class="text-xl font-bold mb-2">Move In/Move Out Cleaning</h4>
+          <p class="p-3"> Our Move In/Move Out Cleaning service ensures that every inch of the property is thoroughly cleaned and sanitized.</p>
+          <a href="moveinout.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
+        </div> -->
       </div>
     </div>
   </section>
