@@ -19,6 +19,7 @@
 </script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" href="flavicon.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
     .zoom-img {
    
@@ -134,6 +135,72 @@
       font-size: 14px;
       opacity: 0.8;
     }
+
+        /* Floating Button Container */
+    .fab-container {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* Main Floating Button */
+    .fab {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .fab:hover {
+      background-color: #0056b3;
+    }
+
+    /* Hidden social icons initially */
+    .fab-options {
+      display: flex;
+      flex-direction: column; /* stack vertically */
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: all 0.35s ease;
+    }
+
+    /* Show on click */
+    .fab-container.active .fab-options {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    /* Social Icon Buttons */
+    .social-icons a img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.1);
+      opacity: 0.85;
+    }
 </style>
 </head>
 <body id="home" class="bg-gray text-gray-800">
@@ -194,10 +261,45 @@
 <li><a href="#contact" class="hover:text-gray-300">Contact</a></li> </ul> </nav> 
 </div>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/254725274364" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg z-50" target="_blank">
-    💬 Chat with us
-  </a>
+  <!-- chat Button -->
+  <div class="fab-container">
+    <div class="fab-options social-icons">
+      <a href="https://wa.me/254725274364" target="_blank" aria-label="WhatsApp">
+        <img src="whatsapp.jpg" alt="WhatsApp">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61579428159258" target="_blank" aria-label="Messenger">
+        <img src="Messenger.jpg" alt="Messenger">
+      </a>
+      <a href="https://www.instagram.com/milgil_cleaners" target="_blank" aria-label="Instagram">
+        <img src="insta.jpg" alt="Instagram">
+      </a>
+      <a href="https://x.com/MilgilCleaners" target="_blank" aria-label="Twitter">
+        <img src="x.jpg" alt="Twitter">
+      </a>
+      <a href="https://www.tiktok.com/@milgil.cleaners" target="_blank" aria-label="TikTok">
+        <img src="tiktok.jpg" alt="TikTok">
+      </a>
+    </div>
+
+    <!-- Floating button -->
+    <button class="fab"><i class="fas fa-comments"></i></button>
+  </div>
+
+  <script>
+    const fabContainer = document.querySelector('.fab-container');
+    const fabButton = document.querySelector('.fab');
+    const fabIcon = fabButton.querySelector('i');
+
+    fabButton.addEventListener('click', () => {
+      fabContainer.classList.toggle('active');
+      // Toggle icon between + and ×
+      if (fabContainer.classList.contains('active')) {
+        fabIcon.classList.replace('fa-plus', 'fa-times');
+      } else {
+        fabIcon.classList.replace('fa-times', 'fa-plus');
+      }
+    });
+  </script>
 </header>
 
 <script>
