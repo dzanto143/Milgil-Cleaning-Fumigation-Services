@@ -19,6 +19,7 @@
 </script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" href="flavicon.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
     .zoom-img {
    
@@ -98,6 +99,108 @@
     font-size: 1rem;
   }
 }
+
+
+
+  .footer-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .footer-container h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+
+    .social-icons {
+      margin: 20px 0;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 12px;
+      color: #fff;
+      font-size: 26px;
+      text-decoration: none;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: #1da1f2; /* light blue hover */
+    }
+
+    .footer-text {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+        /* Floating Button Container */
+    .fab-container {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* Main Floating Button */
+    .fab {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .fab:hover {
+      background-color: #0056b3;
+    }
+
+    /* Hidden social icons initially */
+    .fab-options {
+      display: flex;
+      flex-direction: column; /* stack vertically */
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+      transition: all 0.35s ease;
+    }
+
+    /* Show on click */
+    .fab-container.active .fab-options {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+
+    /* Social Icon Buttons */
+    .social-icons a img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.1);
+      opacity: 0.85;
+    }
 </style>
 </head>
 <body id="home" class="bg-gray text-gray-800">
@@ -158,11 +261,50 @@
 <li><a href="jobs.html" class="hover:text-gray-300">Jobs</a></li>
 <li><a href="#contact" class="hover:text-gray-300">Contact</a></li> </ul> </nav> 
 </div>
+<!-- whatsapp button -->
+      <a href="https://wa.me/254725274364" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg z-50" target="_blank">
+  💬 Chat with us
+</a>
+  <!-- chat Button -->
+   
+  <div class="fab-container">
+    <div class="fab-options social-icons">
+      <a href="https://wa.me/254725274364" target="_blank" aria-label="WhatsApp">
+        <img src="whatsapp.jpg" alt="WhatsApp">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61579428159258" target="_blank" aria-label="Messenger">
+        <img src="Messenger.jpg" alt="Messenger">
+      </a>
+      <a href="https://www.instagram.com/milgil_cleaners" target="_blank" aria-label="Instagram">
+        <img src="insta.jpg" alt="Instagram">
+      </a>
+      <a href="https://x.com/MilgilCleaners" target="_blank" aria-label="Twitter">
+        <img src="x.jpg" alt="Twitter">
+      </a>
+      <a href="https://www.tiktok.com/@milgil.cleaners" target="_blank" aria-label="TikTok">
+        <img src="tiktok.jpg" alt="TikTok">
+      </a>
+    </div>
 
-  <!-- WhatsApp Button -->
-  <a href="https://wa.me/254725274364" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg z-50" target="_blank">
-    💬 Chat with us
-  </a>
+    <!-- Floating button -->
+    <button class="fab"><i class="fas fa-comments"></i></button>
+  </div>
+
+  <script>
+    const fabContainer = document.querySelector('.fab-container');
+    const fabButton = document.querySelector('.fab');
+    const fabIcon = fabButton.querySelector('i');
+
+    fabButton.addEventListener('click', () => {
+      fabContainer.classList.toggle('active');
+      // Toggle icon between + and ×
+      if (fabContainer.classList.contains('active')) {
+        fabIcon.classList.replace('fa-plus', 'fa-times');
+      } else {
+        fabIcon.classList.replace('fa-times', 'fa-plus');
+      }
+    });
+  </script>
 </header>
 
 <script>
@@ -385,38 +527,66 @@
     </div>
   </section>
 <footer class="bg-gray-900 text-white pt-10 pb-6">
-  <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+  <div class="container mx-auto px-6 grid md:grid-cols-4 gap-8">
     
     <!-- Company Info -->
     <div>
       <h4 class="text-xl font-bold mb-4">Milgil Cleaning & Fumigation Services</h4>
-      <p>Reliable and eco-friendly fumigation services for residential, commercial, and industrial needs.</p>
+      <p class="text-gray-300">Reliable and eco-friendly fumigation services for residential, commercial, and industrial needs.</p>
     </div>
     
     <!-- Quick Links -->
     <div>
       <h4 class="text-xl font-bold mb-4">Quick Links</h4>
-      <ul class="space-y-2">
-        <li><a href="#services" class="hover:text-green-400">Our Services</a></li>
-        <li><a href="#about" class="hover:text-green-400">Why Choose Us</a></li>
-        <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
+      <ul class="space-y-2 text-gray-300">
+        <li><a href="#services" class="hover:text-green-400 transition">Our Services</a></li>
+        <li><a href="#about" class="hover:text-green-400 transition">Why Choose Us</a></li>
+        <li><a href="#contact" class="hover:text-green-400 transition">Contact</a></li>
       </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div>
+      <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+      <div class="flex space-x-4">
+        <a href="https://www.facebook.com/profile.php?id=61579428159258" target="_blank" aria-label="Facebook">
+          <img src="facebook.png" alt="Facebook" class="w-8 h-8 rounded-full hover:opacity-80 transition">
+        </a>
+        <a href="https://www.instagram.com/milgil_cleaners?igsh=MWIyMmx2emJhdXN5Yw==" target="_blank" aria-label="Instagram">
+          <img src="instagram.png" alt="Instagram" class="w-8 h-8 rounded-full hover:opacity-80 transition">
+        </a>
+        <a href="https://x.com/MilgilCleaners" target="_blank" aria-label="Twitter">
+          <img src="twitter.png" alt="Twitter" class="w-8 h-8 rounded-full hover:opacity-80 transition">
+        </a>
+        <!--<a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <img src="images/linkedin.jpg" alt="LinkedIn" class="w-8 h-8 rounded-full hover:opacity-80 transition">
+        </a>-->
+        <!--<a href="https://youtube.com" target="_blank" aria-label="YouTube">
+          <img src="images/youtube.jpg" alt="YouTube" class="w-8 h-8 rounded-full hover:opacity-80 transition">
+        </a>-->
+        <a href="https://www.tiktok.com/@milgil.cleaners?_t=ZM-90sZHKXZl9M&_r=1" target="_blank" aria-label="TikTok">
+          <img src="social-media.png" alt="TikTok" class="w-8 h-8 rounded-full hover:opacity-80 transition">
+        </a>
+      </div>
     </div>
     
     <!-- Contact Info -->
     <div>
       <h4 class="text-xl font-bold mb-4">Contact Us</h4>
-      <p>Phone: <a href="tel:+254725274364" class="hover:text-green-400">+254 725 274 364</a></p>
-      <p>Email: <a href=" milgilcleaningandfumigation@gmail.com" class="hover:text-green-400"> milgilcleaningandfumigation@gmail.com</a></p>
-      <p>Location: Kinoo-Nairobi,Kenya</p>
+      <p class="text-gray-300">Phone: <a href="tel:+254725274364" class="hover:text-green-400 transition">+254 725 274 364</a></p>
+      <p class="text-gray-300">Email: <a href="mailto:milgilcleaningandfumigation@gmail.com" class="hover:text-green-400 transition">milgilcleaningandfumigation@gmail.com</a></p>
+      <p class="text-gray-300">Location: Kinoo, Nairobi, Kenya</p>
     </div>
 
   </div>
 
   <div class="mt-8 border-t border-gray-700 pt-4 text-center text-sm text-gray-400">
-      <p>&copy; 2025 Milgil Cleaning & Fumigation Services. All rights reserved.</p>
-      <p>&copy; Built by BM Graphics.</p>
+    <p>&copy; 2025 Milgil Cleaning & Fumigation Services. All rights reserved.</p>
+    <p>Built by <span class="text-green-400 font-semibold">BM Graphics</span>.</p>
   </div>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </footer>
 </body>
 </html>
