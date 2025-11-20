@@ -97,45 +97,58 @@
   </div>
 
 
-  <!-- Application Form -->
-  <div class="bg-white p-8 rounded-lg shadow-md">
-    <h3 class="text-2xl font-bold mb-4">Job Application Form</h3>
+<!-- Application Form -->
+<div class="bg-white p-8 rounded-lg shadow-md">
+  <h3 class="text-2xl font-bold mb-4">Job Application Form</h3>
 
-    <form action="https://formsubmit.co/milgilcleaningandfumigation@gmail.com" method="POST">
+  <form action="https://formsubmit.co/milgilcleaningandfumigation@gmail.com" method="POST" enctype="multipart/form-data">
 
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://milgil-cleaning-fumigation-services.vercel.app/thank-you.html">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://milgil-cleaning-fumigation-services.vercel.app/thank-you.html">
 
-      <label class="block font-semibold mt-3">Full Name</label>
-      <input type="text" name="Full Name" class="w-full p-3 border rounded" required>
+    <!-- Full Name -->
+    <label class="block font-semibold mt-3">Full Name</label>
+    <input type="text" name="Full Name" class="w-full p-3 border rounded" required>
 
-      <label class="block font-semibold mt-3">Phone Number</label>
-      <input type="text" name="Phone" class="w-full p-3 border rounded" required>
+    <!-- Phone -->
+    <label class="block font-semibold mt-3">Phone Number</label>
+    <input type="text" name="Phone" class="w-full p-3 border rounded" required>
 
-      <label class="block font-semibold mt-3">Email (Optional)</label>
-      <input type="email" name="Email" class="w-full p-3 border rounded">
+    <!-- Email -->
+    <label class="block font-semibold mt-3">Email</label>
+    <input type="email" name="Email" class="w-full p-3 border rounded" required>
 
-      <label class="block font-semibold mt-3">Location</label>
-      <input type="text" name="Location" class="w-full p-3 border rounded" required>
+    <!-- Location -->
+    <label class="block font-semibold mt-3">Location</label>
+    <input type="text" name="Location" class="w-full p-3 border rounded" required>
 
-      <label class="block font-semibold mt-3">Position Applying For</label>
-      <select name="Position" class="w-full p-3 border rounded" required>
-        <option value="">-- Select Position --</option>
-        <option value="Cleaning Staff">Cleaning Staff</option>
-        <option value="Sales & Marketing Officer">Sales & Marketing Officer</option>
-      </select>
+    <!-- Position -->
+    <label class="block font-semibold mt-3">Position Applying For</label>
+    <select name="Position" class="w-full p-3 border rounded" required>
+      <option value="">-- Select Position --</option>
+      <option value="Cleaning Staff">Cleaning Staff</option>
+      <option value="Sales & Marketing Officer">Sales & Marketing Officer</option>
+    </select>
 
-      <label class="block font-semibold mt-3">Experience (if any)</label>
-      <textarea name="Experience" class="w-full p-3 border rounded" rows="3"></textarea>
+    <!-- Experience -->
+    <!--<label class="block font-semibold mt-3">Experience (if any)</label>
+    <textarea name="Experience" class="w-full p-3 border rounded" rows="3"></textarea>-->
 
-      <button class="mt-6 bg-yellow-700 hover:bg-green-700 text-white px-6 py-3 rounded font-bold">
-        Submit Application
-      </button>
-    </form>
-  </div>
-</section>
+    <!-- Cover Letter -->
+    <label class="block font-semibold mt-3">Cover Letter</label>
+    <textarea name="Cover Letter" class="w-full p-3 border rounded" rows="5" placeholder="Write your cover letter here..." required></textarea>
 
+    <!-- CV Upload -->
+    <label class="block font-semibold mt-3">Upload CV (PDF or DOCX)</label>
+    <input type="file" name="attachment" accept=".pdf, .doc, .docx" class="w-full p-3 border rounded bg-white" required>
+
+    <!-- Submit -->
+    <button class="mt-6 bg-yellow-700 hover:bg-green-700 text-white px-6 py-3 rounded font-bold">
+      Submit Application
+    </button>
+  </form>
+</div>
 
 <!-- Footer -->
 <footer class="bg-gray-900 text-white pt-10 pb-6">
