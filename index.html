@@ -209,65 +209,79 @@
 </head>
 <body id="home" class="bg-gray text-gray-800">
 <header class="bg-yellow-700 text-white shadow-md">
-<div class="container mx-auto flex justify-between items-center p-4">
-   <!-- Logo + Brand Text --> 
-    <div class="flex items-center space-x-3"> 
-  <img src="flavicon.jpeg" alt="Logo" class="w-10 h-10 rounded-full object-cover" /> 
-  <h1 class="text-sm sm:text-lg font-bold">MILGIL CLEANING & FUMIGATION SERVICES</h1> 
-</div> 
-<!-- Mobile Menu Toggle --> 
-<button id="menu-toggle" class="md:hidden text-white text-2xl p-2 focus:outline-none"> ☰ </button> 
-<!-- Navigation Links --> 
- <nav id="nav-menu" class="hidden md:flex md:items-center md:space-x-6 text-sm sm:text-base">
-   <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
-     <!-- Dropdown --> 
-  <li class="relative group"> <a href="#" class="hover:text-gray-300 flex items-center">Services ▾</a> 
-  <ul class="absolute left-0 mt-1 bg-white text-black rounded-md shadow-lg hidden group-hover:block w-56 z-50">
-  <li><a href="Fumigation Services.html" class="block px-4 py-2 hover:bg-yellow-100">Fumigation</a></li> 
- <li><a href="office cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Office Cleaning</a></li> 
-  <li><a href="Post Construction Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Post Construction Cleaning</a></li> 
- 
-  <!-- Dropdown Wrapper -->
-<li class="relative group">
-  <!-- Main Button -->
-  <button
-    onclick="document.getElementById('cleaningDropdown').classList.toggle('hidden')"
-    class="w-full text-left block px-4 py-2 hover:bg-yellow-100 flex justify-between items-center"
-  >
-    House Cleaning
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
-  </button>
+  <div class="container mx-auto flex justify-between items-center p-3">
 
-  <!-- Dropdown Menu -->
-  <ul
-    id="cleaningDropdown"
-    class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg hidden"
-  >
-    <li><a href="mattress-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Mattress Cleaning</a></li>
-    <li><a href="Sofa Seat Cleaning Services.html" class="block px-4 py-2 hover:bg-yellow-100">Sofa Set Cleaning</a></li>
-    <li><a href="carpertcleaninh.html" class="block px-4 py-2 hover:bg-yellow-100">Carpet Cleaning</a></li>
-    <li><a href="moveinout.html" class="block px-4 py-2 hover:bg-yellow-100">Move-in/Out Cleaning</a></li>
-    <li><a href="window-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Window Cleaning</a></li>
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="flavicon.jpeg" class="w-10 h-10 rounded-full object-cover">
+      <h1 class="text-sm sm:text-lg font-bold">MILGIL CLEANING & FUMIGATION SERVICES</h1>
+    </div>
+
+    <!-- Mobile Button -->
+    <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
+
+  
+<!-- NAV -->
+<nav id="nav-menu" class="hidden md:flex flex-1 justify-center">
+  <ul class="flex flex-col md:flex-row md:items-center md:space-x-10 font-medium">
+
+    <!-- SERVICES -->
+    <li class="relative group">
+      <a href="#" class="hover:text-gray-300">Services ▾</a>
+
+      <ul class="absolute left-0 mt-2 bg-white text-black rounded-md shadow-lg hidden group-hover:block w-56 z-50">
+
+        <!-- House Cleaning -->
+        <li>
+          <button onclick="toggleDropdown('cleaningDropdown')" class="w-full text-left px-4 py-2 hover:bg-yellow-100">
+            House Cleaning
+          </button>
+
+          <ul id="cleaningDropdown" class="hidden ml-3 border-l">
+            <li><a href="mattress-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Mattress Cleaning</a></li>
+            <li><a href="Sofa Seat Cleaning Services.html" class="block px-4 py-2 hover:bg-yellow-100">Sofa Set Cleaning</a></li>
+            <li><a href="carpertcleaninh.html" class="block px-4 py-2 hover:bg-yellow-100">Carpet Cleaning</a></li>
+            <li><a href="moveinout.html" class="block px-4 py-2 hover:bg-yellow-100">Move-in/Out Cleaning</a></li>
+            <li><a href="window-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Window Cleaning</a></li>
+          </ul>
+        </li>
+
+        <li><a href="Fumigation Services.html" class="block px-4 py-2 hover:bg-yellow-100">Fumigation</a></li>
+        <li><a href="office cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Office Cleaning</a></li>
+        <li><a href="Post Construction Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Post Construction Cleaning</a></li>
+        <li><a href="watertank-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Water Tank Cleaning</a></li>
+        <li><a href="restaurant cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Restaurant Cleaning</a></li>
+
+        <!-- Commercial -->
+        <li>
+          <button onclick="toggleDropdown('commercialDropdown')" class="w-full text-left px-4 py-2 hover:bg-yellow-100">
+            Commercial Cleaning
+          </button>
+
+          <ul id="commercialDropdown" class="hidden ml-3 border-l">
+            <li><a href="Industrial Cleaning.HTML" class="block px-4 py-2 hover:bg-yellow-100">Industrial Cleaning</a></li>
+            <li><a href="Government Office Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Government Office Cleaning</a></li>
+            <li><a href="Bank Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Bank Cleaning</a></li>
+            <li><a href="School Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">School Cleaning</a></li>
+            <li><a href="Airport Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Airport Cleaning</a></li>
+            <li><a href="Hospital Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Hospital Cleaning</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </li>
+
+    <!-- STATIC MENU -->
+    <li><a href="#about" class="hover:text-gray-300">About</a></li>
+    <li><a href="blog.html" class="hover:text-gray-300">Blog</a></li>
+    <li><a href="gallery.html" class="hover:text-gray-300">Gallery</a></li>
+    <li><a href="jobs.html" class="hover:text-gray-300">Jobs</a></li>
+    <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+
   </ul>
-</li>
-  <li><a href="car-interior-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Car Interior Cleaning</a></li> 
-   <li><a href="watertank-cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Water Tank Cleaning</a></li> 
-  <li><a href="restaurant cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Restaurant Cleaning</a></li> 
-  <li><a href="Industrial Cleaning.HTML" class="block px-4 py-2 hover:bg-yellow-100">Industrial Cleaning</a></li> 
-  <li><a href="Government Office Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Government Office Cleaning</a></li> 
-  <li><a href="Bank Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Bank Cleaning</a></li> 
-  <li><a href="School Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">School Cleaning</a></li> 
-  <li><a href="Airport Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Airport Cleaning</a></li> 
-  <li><a href="Hospital Cleaning.html" class="block px-4 py-2 hover:bg-yellow-100">Hospital Cleaning</a></li></ul> 
-</li> <!-- Static Links --> 
-<li><a href="#about" class="hover:text-gray-300">About</a></li> 
-<li><a href="blog.html" class="hover:text-gray-300">Blog</a></li> 
-<li><a href="gallery.html" class="hover:text-gray-300">Gallery</a></li> 
-<li><a href="jobs.html" class="hover:text-gray-300">Jobs</a></li>
-<li><a href="#contact" class="hover:text-gray-300">Contact</a></li> </ul> </nav> 
-</div>
+</nav>
+  </div>
+</header>
 <!-- whatsapp button -->
       <a href="https://wa.me/254725274364" class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow-lg z-50" target="_blank">
   💬 Chat with us
@@ -285,9 +299,9 @@
       <a href="https://www.instagram.com/milgil_cleaners" target="_blank" aria-label="Instagram">
         <img src="insta.jpg" alt="Instagram">
       </a>
-      <a href="https://x.com/MilgilCleaners" target="_blank" aria-label="Twitter">
+      <!--<a href="https://x.com/MilgilCleaners" target="_blank" aria-label="Twitter">
         <img src="x.jpg" alt="Twitter">
-      </a>
+      </a>-->
       <a href="https://www.tiktok.com/@milgil.cleaners" target="_blank" aria-label="TikTok">
         <img src="tiktok.jpg" alt="TikTok">
       </a>
@@ -337,12 +351,22 @@
       <h3 class="text-3xl font-bold text-center mb-10"><u>Our Services</u></h3>
       <div class="grid md:grid-cols-3 gap-8" >
 
-        <div class="bg-white p-6 rounded-lg shadow-md">
-            <img src="hous cleaning.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
-          <h4 class="text-xl font-bold mb-3">House Cleaning Services</h4>
-          <p class="p-2">We focus on eliminating built-up dirt, grease, grime, allergens, and germs from every corner of your home.</p>
-          <a href="housecleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
-        </div>
+<div class="bg-white p-6 rounded-lg shadow-md">
+  <img src="hous cleaning.jpeg" 
+       alt="Fumigation Team"
+       class="w-full h-48 object-cover rounded-lg shadow-md">
+
+  <h4 class="text-xl font-bold mb-3 mt-4">House Cleaning Services</h4>
+
+  <p class="p-2">
+    We focus on eliminating built-up dirt, grease, grime, allergens, and germs from every corner of your home.
+  </p>
+
+  <a href="housecleaning.html" 
+     class="inline-block mt-3 bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">
+     For More Information
+  </a>
+</div>
         <div class="bg-white p-6 rounded-lg shadow-md" >
             <img src="office cleeaning.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
           <h4 class="text-xl font-bold mb-3">Office Cleaning Services</h4>
@@ -385,12 +409,12 @@
           <p class="p-2">Sanitize your spaces from viruses, bacteria, and other harmful microorganisms.</p>
            <a href="watertank-cleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
         </div>
-         <div class="bg-white p-6 rounded-lg shadow-md">
+         <!--<div class="bg-white p-6 rounded-lg shadow-md">
                     <img src="car cleaning.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
           <h4 class="text-xl font-bold mb-3">Car Interior Cleaning Services</h4>
           <p class="p-2">Our Car Interior Cleaning service gives your car a fresh feel and showroom shine.</p>
            <a href="car-interior-cleaning.html" class="bg-yellow-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-semibold">For More Information</a>
-        </div>
+        </div>-->
          <div class="bg-white p-6 rounded-lg shadow-md">
                     <img src="matress cleaning.jpeg" class="zoom-img" alt="Fumigation Team" class="w-full max-w-md mx-auto rounded-lg shadow-md">
           <h4 class="text-xl font-bold mb-3">Mattress Cleaning</h4>
@@ -562,9 +586,9 @@
         <a href="https://www.instagram.com/milgil_cleaners?igsh=MWIyMmx2emJhdXN5Yw==" target="_blank" aria-label="Instagram">
           <img src="instagram.png" alt="Instagram" class="w-8 h-8 rounded-full hover:opacity-80 transition">
         </a>
-        <a href="https://x.com/MilgilCleaners" target="_blank" aria-label="Twitter">
+        <!--<a href="https://x.com/MilgilCleaners" target="_blank" aria-label="Twitter">
           <img src="twitter.png" alt="Twitter" class="w-8 h-8 rounded-full hover:opacity-80 transition">
-        </a>
+        </a>-->
         <!--<a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
           <img src="images/linkedin.jpg" alt="LinkedIn" class="w-8 h-8 rounded-full hover:opacity-80 transition">
         </a>-->
@@ -594,6 +618,11 @@
 
   <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+function toggleDropdown(id) {
+  document.getElementById(id).classList.toggle('hidden');
+}
+</script>
 </footer>
 </body>
 </html>
